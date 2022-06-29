@@ -4,7 +4,7 @@ COPY . .
 
 RUN botway init --docker
 
-FROM ruby:alpine
+FROM crystallang/crystal:nightly-alpine
 
 ENV PACKAGES "build-dependencies build-base gcc git libsodium opus ffmpeg"
 
@@ -18,10 +18,6 @@ COPY --from=bw /root/.botway /root/.botway
 
 COPY . .
 
-RUN gem update --system
-RUN gem install bundler
-RUN bundle install
+RUN shards install --production -v
 
-EXPOSE 8000
-
-ENTRYPOINT ["bundle", "exec", "ruby", "./src/main.rb"]
+ENTRYPOINT [ "crystal", "run", "src/main.cr" ]
