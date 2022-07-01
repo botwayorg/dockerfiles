@@ -18,6 +18,6 @@ COPY --from=bw /root/.botway /root/.botway
 
 COPY . .
 
-RUN shards install --production -v
+RUN shards install
 
 ENTRYPOINT [ "crystal", "run", "src/main.cr" ]
