@@ -21,6 +21,6 @@ COPY . .
 RUN shards install
 RUN shards build --static --no-debug --release --production -v
 
-RUN cd ./bin && mv "{{.BotName}}" bot && cd ..
+RUN cd ./bin && mv {{.BotName}} bot && cd ..
 
 ENTRYPOINT [ "./bin/bot" ]
