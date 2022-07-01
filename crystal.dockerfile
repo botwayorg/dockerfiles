@@ -6,6 +6,7 @@ RUN botway init --docker
 
 FROM crystallang/crystal:nightly-alpine
 
+ENV BOT_NAME="{{.BotName}}"
 ENV PACKAGES "build-dependencies build-base gcc git libsodium opus ffmpeg"
 
 RUN apk update && \
@@ -21,6 +22,4 @@ COPY . .
 RUN shards install
 RUN shards build --static --no-debug --release --production -v
 
-RUN cd ./bin && mv {{.BotName}} bot && cd ..
-
-ENTRYPOINT [ "./bin/bot" ]
+ENTRYPOINT [ "./bin/${BOT_NAME}" ]
