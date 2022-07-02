@@ -20,4 +20,6 @@ COPY . .
 
 RUN shards install --production -v
 
+EXPOSE 8000
+
 ENTRYPOINT [ "crystal", "run", "src/main.cr" ]

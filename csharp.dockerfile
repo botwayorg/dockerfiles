@@ -19,4 +19,6 @@ RUN dotnet publish -c Release -o out
 
 COPY --from=bw /root/.botway /root/.botway
 
+EXPOSE 8000
+
 ENTRYPOINT ["dotnet", "./out/Main.dll"]
