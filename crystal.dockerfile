@@ -18,8 +18,9 @@ COPY --from=bw /root/.botway /root/.botway
 
 COPY . .
 
-RUN shards install --production -v
+RUN shards install
+RUN shards build --static --no-debug --release --production -v
 
 EXPOSE 8000
 
-ENTRYPOINT [ "crystal", "run", "src/main.cr" ]
+ENTRYPOINT [ "./bin/{{.BotName}}" ]
