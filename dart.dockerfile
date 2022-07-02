@@ -6,14 +6,14 @@ RUN botway init --docker
 
 FROM dart:stable AS build
 
+COPY --from=bw /root/.botway /root/.botway
+
 COPY . .
 
 RUN dart pub get
-
-COPY --from=bw /root/.botway /root/.botway
 
 RUN dart compile exe src/main.dart -o bot
 
 EXPOSE 8000
 
-CMD ["./bot"]
+ENTRYPOINT ["./bot"]
