@@ -4,7 +4,7 @@ COPY . .
 
 RUN botway init --docker
 
-FROM dart:stable AS build
+FROM dart:stable
 
 COPY --from=bw /root/.botway /root/.botway
 
