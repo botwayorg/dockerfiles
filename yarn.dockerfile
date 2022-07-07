@@ -22,4 +22,4 @@ RUN yarn
 
 EXPOSE 8000
 
-ENTRYPOINT ["node", "./src/index.js"]
+ENTRYPOINT ["node", "./src/main.js"]
