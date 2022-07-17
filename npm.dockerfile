@@ -21,4 +21,4 @@ RUN apk update && \
 
 RUN npm i --production
 
-ENTRYPOINT ["node", "./src/index.js"]
+ENTRYPOINT ["node", "./src/main.js"]

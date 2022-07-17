@@ -22,4 +22,4 @@ RUN apk update && \
 RUN pnpm fetch --prod
 RUN pnpm install
 
-ENTRYPOINT ["node", "./src/index.js"]
+ENTRYPOINT ["node", "./src/main.js"]

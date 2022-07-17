@@ -12,4 +12,4 @@ RUN botway init --docker
 
 RUN deno cache deps.ts
 
-ENTRYPOINT ["deno", "run", "--allow-all", "src/main.ts"]
+ENTRYPOINT ["deno", "run", "--allow-all", "main.ts"]

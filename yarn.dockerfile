@@ -20,4 +20,4 @@ RUN apk update && \
 
 RUN yarn
 
-ENTRYPOINT ["node", "./src/index.js"]
+ENTRYPOINT ["node", "./src/main.js"]

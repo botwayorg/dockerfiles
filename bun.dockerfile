@@ -10,6 +10,8 @@ COPY --from=bw /root/.botway /root/.botway
 
 COPY . .
 
+ENV PATH="/root/.bun/bin:$PATH"
+
 RUN bun i
 
-ENTRYPOINT [ "bun", "dev" ]
+ENTRYPOINT [ "bun", "src/main.js" ]
