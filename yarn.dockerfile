@@ -20,6 +20,4 @@ RUN apk update && \
 
 RUN yarn
 
-EXPOSE 8000
-
 ENTRYPOINT ["node", "./src/index.js"]

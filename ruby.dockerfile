@@ -22,6 +22,4 @@ RUN gem update --system
 RUN gem install bundler
 RUN bundle install
 
-EXPOSE 8000
-
 ENTRYPOINT ["bundle", "exec", "ruby", "./src/main.rb"]

@@ -22,6 +22,4 @@ RUN apk update && \
 RUN pnpm fetch --prod
 RUN pnpm install
 
-EXPOSE 8000
-
 ENTRYPOINT ["node", "./src/index.js"]

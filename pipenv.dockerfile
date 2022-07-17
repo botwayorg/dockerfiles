@@ -27,6 +27,4 @@ RUN pipenv lock
 RUN pipenv sync --system
 RUN pipenv install
 
-EXPOSE 8000
-
 ENTRYPOINT ["pipenv", "run", "python3", "./src/main.py"]

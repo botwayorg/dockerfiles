@@ -23,6 +23,4 @@ COPY . .
 RUN go mod tidy
 RUN go build -o bot ./src/main.go
 
-EXPOSE 8000
-
 ENTRYPOINT ["./bot"]

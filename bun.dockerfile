@@ -12,6 +12,4 @@ COPY . .
 
 RUN bun i
 
-EXPOSE 8000
-
 ENTRYPOINT [ "bun", "dev" ]

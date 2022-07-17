@@ -21,6 +21,4 @@ RUN apk update && \
 
 RUN npm i --production
 
-EXPOSE 8000
-
 ENTRYPOINT ["node", "./src/index.js"]

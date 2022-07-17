@@ -21,6 +21,4 @@ COPY . .
 RUN shards install
 RUN shards build --static --no-debug --release --production -v
 
-EXPOSE 8000
-
 ENTRYPOINT [ "./bin/{{.BotName}}" ]

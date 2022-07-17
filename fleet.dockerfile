@@ -40,6 +40,4 @@ COPY . .
 
 RUN fleet build --release --bin bot
 
-EXPOSE 8000
-
 ENTRYPOINT ["./target/release/bot"]

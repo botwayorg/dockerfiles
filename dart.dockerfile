@@ -14,6 +14,4 @@ RUN dart pub get
 
 RUN dart compile exe src/main.dart -o bot
 
-EXPOSE 8000
-
 ENTRYPOINT ["./bot"]
