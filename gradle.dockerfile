@@ -6,7 +6,7 @@ RUN botway init --docker
 
 FROM gradle:alpine
 
-ENV PACKAGES "build-dependencies build-base gcc git libsodium opus ffmpeg"
+ENV PACKAGES "build-dependencies build-base openssl openssl-dev musl-dev libressl-dev gcc git libsodium opus ffmpeg m4"
 
 RUN apk update && \
 	apk add --no-cache --virtual ${PACKAGES}
