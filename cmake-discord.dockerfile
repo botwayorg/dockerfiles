@@ -6,15 +6,15 @@ RUN botway init --docker
 
 FROM brainboxdotcc/dpp:latest
 
-WORKDIR /usr/src/bwbot
+WORKDIR /usr/src/{{.BotName}}
 
 COPY --from=bw /root/.botway /root/.botway
 
 COPY . .
 
-WORKDIR /usr/src/bwbot/build
+WORKDIR /usr/src/{{.BotName}}/build
 
 RUN cmake ..
 RUN make -j$(nproc)
 
-ENTRYPOINT [ "/usr/src/bwbot/build/bwbot" ]
+ENTRYPOINT [ "/usr/src/{{.BotName}}/build/{{.BotName}}" ]
