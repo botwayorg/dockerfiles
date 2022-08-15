@@ -1,7 +1,7 @@
 FROM python:alpine
 FROM botwayorg/botway:latest
 
-ENV PACKAGES "build-dependencies build-base gcc abuild binutils py-pip binutils-doc gcc-doc python3-dev libffi-dev git"
+ENV PACKAGES "build-dependencies build-base gcc abuild binutils py-pip binutils-doc gcc-doc python3-dev libffi-dev git binutils openssl-dev zlib-dev boost boost-dev"
 
 COPY . .
 

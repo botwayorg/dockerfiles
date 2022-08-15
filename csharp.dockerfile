@@ -22,7 +22,7 @@ ENV \
     DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false \
     LC_ALL=en_US.UTF-8 \
     LANG=en_US.UTF-8 \
-    PACKAGES="build-dependencies build-base gcc git libsodium opus ffmpeg icu-libs"
+    PACKAGES="build-dependencies build-base gcc git libsodium opus ffmpeg icu-libs binutils openssl-dev zlib-dev boost boost-dev"
 
 RUN apk update && \
 	apk add --no-cache --virtual ${PACKAGES}

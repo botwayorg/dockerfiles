@@ -6,7 +6,7 @@ RUN botway init --docker
 
 FROM crystallang/crystal:nightly-alpine
 
-ENV PACKAGES "build-dependencies build-base gcc git libsodium opus ffmpeg"
+ENV PACKAGES "build-dependencies build-base gcc git libsodium opus ffmpeg binutils openssl-dev zlib-dev boost boost-dev"
 
 RUN apk update && \
 	apk add --no-cache --virtual ${PACKAGES}
